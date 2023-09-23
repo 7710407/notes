@@ -1,4 +1,5 @@
-import React, { lazy } from 'react'
+import React from 'react'
+import ReactMarkdown from "react-markdown"
 
 const Main = ({ activeNote, onUpdateNote }) => {
     const onEditField = (key, value) => {
@@ -30,7 +31,7 @@ const Main = ({ activeNote, onUpdateNote }) => {
             <div className='app-main-note-preview'>
                     <h1 className='preview-title'>{activeNote.title}</h1>
                     
-                    <h1 className='markdown-preview'>{activeNote.body}</h1>
+                    <ReactMarkdown className='markdown-preview'>{activeNote.body}</ReactMarkdown>
             </div>
         </div>
     )
